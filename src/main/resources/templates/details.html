@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Book Details</title>
+</head>
+<body>
+    <h1 th:text="${book.title}"></h1>
+    <img th:src="${book.imgUrl}" alt="Book Image" style="max-width: 300px; height: auto;">
+    <p th:text="'Author: ' + ${book.author}"></p>
+    <p th:text="'Sold By: ' + ${book.soldBy}"></p>
+    <p th:text="'Stars: ' + ${book.stars}"></p>
+    <p th:text="'Reviews: ' + ${book.reviews}"></p>
+    <p th:text="'Price: $' + ${book.price}"></p>
+    <p th:text="'Published Date: ' + ${book.publishedDate}"></p>
+    <button onclick="history.back()">Back to Results</button>
+</body>
+</html>
