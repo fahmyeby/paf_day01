@@ -30,7 +30,7 @@ public class BookRepo {
 
     // get by author with specified limit
     public List<Book> getByAuthor(String author, int limit){
-        SqlRowSet rs = template.queryForRowSet(Queries.SEARCH_BY_AUTHOR, "%" + author + "%", limit);
+        SqlRowSet rs = template.queryForRowSet(Queries.SEARCH_BY_AUTHOR, "%%s%%".formatted(author), limit);
         List<Book> books = new LinkedList<>();
         while(rs.next()){
             books.add(Book.toBook(rs));
