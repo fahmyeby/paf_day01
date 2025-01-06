@@ -14,7 +14,6 @@ public class Book {
     private String publishedDate;
     private String categoryName;
 
-    // Getters and setters
     public String getAsin() {
         return asin;
     }
@@ -95,6 +94,7 @@ public class Book {
         this.categoryName = categoryName;
     }
 
+    // helper method to get and set from csv data to model variables ^
     public static Book toBook(SqlRowSet rs) {
         Book b = new Book();
         b.setAsin(rs.getString("asin"));
